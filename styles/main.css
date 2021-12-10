@@ -1,0 +1,190 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#container {
+  min-height: 100vh;
+  background: url(../images/money.jpg);
+  background-size: cover;
+}
+
+#container #bgcol {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 4rem 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[6];
+      grid-template-rows: repeat(6, 1fr);
+}
+
+#container #bgcol header {
+  text-align: center;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  grid-row: 3/5;
+}
+
+#container #bgcol header h1 {
+  text-transform: uppercase;
+  color: white;
+  font: normal bolder 3.5rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#container #bgcol header p {
+  text-align: center;
+  font: italic bold 1.2rem "Segoe UI", Tahoma, Geneva, Verdana;
+  color: white;
+}
+
+#container #bgcol main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  grid-row: 1/5;
+}
+
+#container #bgcol main h2 {
+  color: white;
+  text-align: center;
+  font: normal bold 2.1rem "Times New Roman", Times, serif;
+}
+
+#container #bgcol main form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+#container #bgcol main form input {
+  margin: 1rem auto;
+  padding: 1rem 1.5rem;
+  font: normal normal 1.2rem "Times New Roman", Times, serif;
+  width: 90%;
+  border: 1px solid transparent;
+  outline: 2px solid transparent;
+  border-radius: 5px;
+}
+
+#container #bgcol main form input:focus {
+  border: 1px solid #989999;
+  outline: 2px solid #f5f3f5;
+  outline-offset: 5px;
+}
+
+#container #bgcol main form #gender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0rem 1.2rem;
+}
+
+#container #bgcol main form #gender label {
+  color: white;
+  font: normal normal 1.3rem "Times New Roman", Times, serif;
+  text-align: center;
+  margin-left: 1rem;
+}
+
+#container #bgcol main form #gender input {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  top: 4px;
+  margin-left: 0.8rem;
+}
+
+#container #bgcol main form #gender input:focus {
+  border: none;
+  outline: none;
+  outline-offset: 0px;
+}
+
+#container #bgcol main form input[type="submit"] {
+  padding: 0.6rem 0.5rem;
+  width: 90%;
+  background-color: #989999;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+#container #bgcol main form input[type="submit"]:hover {
+  background-color: #727172;
+}
+
+@media screen and (max-width: 995px) {
+  #container #bgcol main form input {
+    margin: 0.5rem auto;
+    padding: 1rem 1rem;
+  }
+  #container #bgcol main form #gender {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+  }
+  #container #bgcol main form #gender label {
+    font: normal normal 1.5rem "Times New Roman", Times, serif;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #container #bgcol {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #container #bgcol header {
+    margin: 0.5rem auto;
+  }
+  #container #bgcol header h1 {
+    margin: 1.5rem auto;
+  }
+  #container #bgcol header p {
+    margin: 0.5rem auto;
+    font-size: 1.4rem;
+  }
+  #container #bgcol main h2 {
+    margin: 0.5rem auto;
+    font-size: 2.4rem;
+  }
+  #container #bgcol main form {
+    margin: 1.5rem 0rem;
+  }
+  #container #bgcol main form input {
+    margin: 1rem auto;
+  }
+  #container #bgcol main form input[type="submit"] {
+    margin: 1rem auto;
+    padding: 1rem 0.6rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

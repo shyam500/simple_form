@@ -1,0 +1,159 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+#container {
+  min-height: 100vh;
+  background: url(../images/money.jpg);
+  background-size: cover;
+  #bgcol {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    header {
+      text-align: center;
+      grid-row: 3/5;
+      h1 {
+        text-transform: uppercase;
+        color: white;
+        font: normal bolder 3.5rem "Segoe UI", Tahoma, Geneva, Verdana,
+          sans-serif;
+      }
+      p {
+        text-align: center;
+        font: italic bold 1.2rem "Segoe UI", Tahoma, Geneva, Verdana;
+        color: white;
+      }
+    }
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row: 1/5;
+      h2 {
+        color: white;
+        text-align: center;
+        font: normal bold 2.1rem "Times New Roman", Times, serif;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        input {
+          margin: 1rem auto;
+          padding: 1rem 1.5rem;
+          font: normal normal 1.2rem "Times New Roman", Times, serif;
+          width: 90%;
+          border: 1px solid transparent;
+          outline: 2px solid transparent;
+          border-radius: 5px;
+          &:focus {
+            border: 1px solid rgb(152, 153, 153);
+            outline: 2px solid rgb(245, 243, 245);
+            outline-offset: 5px;
+          }
+        }
+        #gender {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          padding: 0rem 1.2rem;
+          label {
+            color: white;
+            font: normal normal 1.3rem "Times New Roman", Times, serif;
+            text-align: center;
+            margin-left: 1rem;
+          }
+          input {
+            height: 20px;
+            width: 20px;
+            position: relative;
+            top: 4px;
+            margin-left: 0.8rem;
+            &:focus {
+              border: none;
+              outline: none;
+              outline-offset: 0px;
+            }
+          }
+        }
+        input[type="submit"] {
+          padding: 0.6rem 0.5rem;
+          width: 90%;
+          background-color: rgb(152, 153, 153);
+          border: none;
+          color: white;
+          font-size: 1.3rem;
+          transition: 0.5s linear;
+          &:hover {
+            background-color: rgb(114, 113, 114);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 995px) {
+  #container {
+    #bgcol {
+      main {
+        form {
+          input {
+            margin: 0.5rem auto;
+            padding: 1rem 1rem;
+          }
+          #gender {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            label {
+              font: normal normal 1.5rem "Times New Roman", Times, serif;
+            }
+          }
+        } 
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 780px) {
+  #container {
+    #bgcol {
+      display: flex;
+      flex-direction: column;
+      header {
+        margin: 0.5rem auto;
+        h1{
+          margin: 1.5rem auto;
+        }
+        p{
+          margin: 0.5rem auto;
+          font-size: 1.4rem;
+        }
+      }
+      main{
+        h2{
+          margin: 0.5rem auto;
+          font-size: 2.4rem;
+        }
+        form{
+          margin: 1.5rem 0rem;
+          input{
+            margin: 1rem auto;
+          }
+          input[type="submit"]{
+            margin: 1rem auto;
+            padding: 1rem 0.6rem;
+          }
+        }
+      }
+    }
+  }
+}
